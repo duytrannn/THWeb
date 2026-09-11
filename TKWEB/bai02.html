@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .show_p {
+            display: flex;
+        }
+        
+        .hide_p {
+            display: none;
+        }
+        
+        img {
+            display: none;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="show"> Show</button>
+    <button id="hide"> Hide</button>
+    <div>
+
+        <img id="meo1" src="./meo1.jpg" alt="">
+        <img id="meo2" src="./meo2.jpg" alt="">
+    </div>
+
+    <script>
+        var show = document.getElementById('show')
+        var hide = document.getElementById('hide')
+        count = 1
+
+        show.onclick = () => {
+            count++
+            if (count % 2 == 0) {
+                meo1.classList.add("show_p")
+                meo1.classList.remove("hide_p")
+            } else {
+                meo2.classList.add("show_p")
+                meo2.classList.remove("hide_p")
+            }
+
+        }
+
+        hide.onclick = () => {
+            if (count % 2 != 0) {
+                meo1.classList.add("hide_p")
+                meo1.classList.remove("show_p")
+            } else {
+                meo2.classList.add("hide_p")
+                meo2.classList.remove("show_p")
+            }
+
+        }
+    </script>
+</body>
+
+</html>

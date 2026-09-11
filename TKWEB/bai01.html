@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="para">This is paragrapes</p>
+    <button id="RED">red</button>
+    <button id="PINK">pink</button>
+    <button id="btnClick">click</button>
+    <span id='countEle'></span>
+
+    <script>
+        var para = document.getElementById('para')
+        var RED = document.getElementById('RED')
+        var PINK = document.getElementById('PINK')
+        var btnClick = document.getElementById('btnClick')
+        var countEle = document.getElementById('countEle')
+        var count = 0
+
+        RED.onclick = () => {
+            para.style.backgroundColor = 'red'
+        }
+        PINK.onclick = () => {
+            para.style.backgroundColor = 'PINK'
+        }
+
+        function fn() {
+            count++
+            countEle.innerText = count
+        }
+        btnClick.onclick = fn
+    </script>
+</body>
+
+</html>
