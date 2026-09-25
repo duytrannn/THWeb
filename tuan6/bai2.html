@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // [abc]
+        // 1
+        function kqua1(){
+            var st ="12345"
+            var pattern=/[135]/g
+            var kq=st.match(pattern)
+            console.log(kq)
+  
+        }
+        kqua1()
+
+        // 2
+        function kqua2(){
+            var st ="Hello hello HELLO"
+            var pattern=/[Hh]ello/g
+            var kq=st.match(pattern)
+            console.log(kq)
+  
+        }
+        kqua2()
+
+
+        // 3
+        function kqua3(){
+            var st ="Xin chào, bạn khỏe không? Tốt!"
+            var pattern=/[.?!,]/g
+            var kq=st.match(pattern)
+            console.log(kq.length)
+  
+        }
+        kqua3()
+
+
+        // [^abc]
+        // 1
+        function kqua4(){
+            var st ="programming"
+            var pattern=/[^ueoai]/g
+            var kq=st.replace(pattern,"")
+            console.log(kq)
+  
+        }
+        kqua4()
+
+        // 2
+        function kqua5(){
+            var st ='nói "xin chào" và "tạm biệt"'
+            var pattern=/"[^"]+"/g
+            var kq=st.match(pattern)
+            console.log(kq)
+  
+        }
+        kqua5()
+
+        // 3
+        function kqua6(){
+            var st ='a1,b2;c3'
+            var pattern=/[^\da-z]/g
+            var kq=st.split(pattern)
+            console.log(kq)
+  
+        }
+        kqua6()
+        
+        // [a-g] 
+        // 1
+        function kqua7(){
+            var st ='Học ReactJS Và TypeScript'
+            var pattern=/[A-Z]/g
+            var kq=st.match(pattern)
+            console.log(kq)
+  
+        }
+        kqua7()
+
+        // 2
+        function kqua8(){
+            var st = '#1a2B3c'
+            var pattern=/^#[0-9a-fA-F]{6}$/ 
+            
+            console.log(pattern.test("#45f535"))
+            console.log(pattern.test("45fE4535"))
+  
+        }
+        kqua8()
+
+
+    </script>
+</body>
+</html>
