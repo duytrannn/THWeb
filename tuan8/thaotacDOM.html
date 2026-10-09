@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h2 id="title">Sách bán chạy</h2>
+    <p id="price">120.000đ</p>
+    <input type="text" id="search-box" placeholder="Nhập tên sách">
+    <button id="btn-read">Đọc</button>
+    <button id="btn-change">Thay đổi</button>
+    <script>
+        $("#btn-read").on("click", function() {
+            console.log("text:", $("#title").text());
+            console.log("html:", $("#price").html());
+            console.log("val :", $("#search-box").val());
+        });
+
+        $("#btn-change").on("click", function() {
+            $("#title").text("Sách mới về <b>tuần này</b>"); // <b> hiện nguyên chữ
+            $("#price").html("<strong>99.000đ</strong>"); // <strong> được render
+            $("#search-box").val("Nhà giả kim");
+        });
+    </script>
+    <div>
+        <img id="cover" src="https://via.placeholder.com/120x160" alt="Bìa sách">
+        <div id="book" data-id="12" data-genre="fiction">Nhà Giả Kim</div>
+        <label><input type="checkbox" id="agree"> Tôi đồng ý điều khoản</label>
+        <button id="btn-run">Chạy</button>
+    </div>
+    <script>
+        $("#btn-run").on("click", function() {
+            // attr: đọc/ghi thuộc tính HTML
+            console.log("alt =", $("#cover").attr("alt"));
+            $("#cover").attr("alt", "Bìa Nhà Giả Kim");
+
+            // data: đọc thuộc tính data-*
+            console.log("id =", $("#book").data("id"));
+            console.log("genre =", $("#book").data("genre"));
+
+            // prop: dùng cho true/false (checked, disabled)
+            $("#agree").prop("checked", true);
+            console.log("Đã tick?", $("#agree").prop("checked"));
+        });
+    </script>
+</body>
+
+</html>
