@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var a = parseInt(prompt("nhap so thu 1"));
+        var b = parseInt(prompt("nhap so thu 2"));
+
+        var cong = document.createElement('button');
+        cong.textContent = "tong";
+        cong.onclick = () => {
+            alert("tong:" + (a + b))
+        }
+        document.body.appendChild(cong);
+
+        var tru = document.createElement('button');
+        tru.textContent = "tru";
+        tru.onclick = () => {
+            alert("tru:" + (a - b))
+        }
+        document.body.appendChild(tru);
+
+        var nhan = document.createElement('button');
+        nhan.textContent = "nhan";
+        nhan.onclick = () => {
+            alert("nhan:" + (a * b))
+        }
+        document.body.appendChild(nhan);
+
+        var chia = document.createElement('button');
+        chia.textContent = "chia";
+        chia.onclick = () => {
+            alert("chia:" + (a / b))
+        }
+        document.body.appendChild(chia);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ba8_bai1</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .green {
+            border-color: green;
+            font-weight: bold;
+        }
+        
+        .red {
+            border-color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="txt" type="text" , placeholder="nhap ngay">
+    <button id="btn">Kiem tra</button>
+    <span id="result"></span>
+    <script>
+        $('#btn').click(() => {
+            var pattern = /^\d{2}\/\d{2}\/\d{4}$/
+            var texttt = $('#txt').val()
+            var testt = pattern.test(texttt)
+            if (testt) {
+                $('#txt').removeClass("red")
+                $('#txt').addClass("green")
+                $('#result').text("Hop Le").css({
+                    'color': 'green'
+                })
+            } else {
+                $('#txt').removeClass("green")
+                $('#txt').addClass("red")
+                $('#result').text("Sai").css({
+                    'color': 'red'
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

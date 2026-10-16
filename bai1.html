@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+    <input id="txt" type="text" , placeholder="nhap so">
+    <button id="btn">Kiem tra</button>
+    <span id="result"></span>
+    <script>
+        $('#btn').click(() => {
+            var pattern = /^\d+$/
+            var texttt = $('#txt').val()
+            var testt = pattern.test(texttt)
+            if (testt) {
+                $('#result').text("Dung")
+            } else {
+                $('#result').text("Sai")
+            }
+        })
+    </script>
+</body>
+
+</html>
